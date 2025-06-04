@@ -32,7 +32,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get("DEBUG") == "True"
 
 # ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
-ALLOWED_HOSTS = ['carmatch.onrender.com', 'localhost', '127.0.0.1']
+# ALLOWED_HOSTS = ['carmatch.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [host.strip() for host in os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")]
 
 
 # Application definition

@@ -27,6 +27,7 @@ def health_check(request):
 
 urlpatterns = [
     path('', health_check),  # 👈 Теперь GET / вернёт {"status": "ok"}
+    path('', lambda request: JsonResponse({'status': 'ok'})),
     path('admin/', admin.site.urls),  # Лучше не ставить админку на '', а на /admin/
     path('api/', include('cars.urls')),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),

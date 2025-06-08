@@ -266,6 +266,9 @@ JAZZMIN_UI_TWEAKS = {
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5176",
+    "http://localhost:5178",
+    "http://127.0.0.1:5176",
+    "http://127.0.0.1:5178",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
